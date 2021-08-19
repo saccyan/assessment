@@ -21,6 +21,12 @@ assessmentButton.onclick = () => {
       // 名前が空の時は処理を終了する
       return;
     }
+ 
+     userNameInput.onkeydown = event => {
+  if (event.key === 'Enter'){
+    assessmentButton.onclick();
+  }
+};  
   
     // 診断結果表示エリアの作成
     resultDivided.innerText = "";
